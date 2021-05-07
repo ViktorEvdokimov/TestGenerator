@@ -14,11 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49243b45-c9a1-4a3b-be94-5fb960a2657d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WriterToFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/groups.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PersonsGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WriterToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WriterToFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WriterToFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WriterToFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/groups.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/groups.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -104,21 +109,29 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1876" height="280" key="GridCell.Tab.0.bottom" timestamp="1620409662620">
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser" timestamp="1620411589013">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.bottom/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620409662620" />
-    <state width="1876" height="280" key="GridCell.Tab.0.center" timestamp="1620409662620">
+    <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620411589013" />
+    <state width="1876" height="280" key="GridCell.Tab.0.bottom" timestamp="1620410915524">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.center/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620409662620" />
-    <state width="1876" height="280" key="GridCell.Tab.0.left" timestamp="1620409662620">
+    <state width="1876" height="280" key="GridCell.Tab.0.bottom/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620410915524" />
+    <state width="1876" height="280" key="GridCell.Tab.0.center" timestamp="1620410915524">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.left/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620409662620" />
-    <state width="1876" height="280" key="GridCell.Tab.0.right" timestamp="1620409662620">
+    <state width="1876" height="280" key="GridCell.Tab.0.center/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620410915524" />
+    <state width="1876" height="280" key="GridCell.Tab.0.left" timestamp="1620410915524">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.right/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620409662620" />
+    <state width="1876" height="280" key="GridCell.Tab.0.left/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620410915524" />
+    <state width="1876" height="280" key="GridCell.Tab.0.right" timestamp="1620410915524">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1876" height="280" key="GridCell.Tab.0.right/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620410915524" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1620412069256">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620412069256" />
   </component>
 </project>

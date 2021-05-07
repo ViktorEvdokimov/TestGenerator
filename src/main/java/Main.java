@@ -13,11 +13,14 @@ public class Main {
         obj.put("Name", "First group");
 
         JSONArray persons = new JSONArray();
-        persons.add("Person: Vasya");
-        persons.add("Person: Ivan");
-        persons.add("Person: Masha");
+        PersonsGenerator pg = new PersonsGenerator();
+        Person personsArray[] = pg.getPersonArray(50);
+        for (Person person: personsArray) {
+            persons.add(person);
+        }
         obj.put("Persons List", persons);
-        WriterToFile.writeToFile(obj);
+        WriterToFile writer = new WriterToFile("D:\\Projects\\TestGenerator\\src\\main\\resources\\groups.json");
+        writer.writeToFile(obj);
 
     }
 

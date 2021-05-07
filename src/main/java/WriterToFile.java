@@ -8,9 +8,13 @@ import java.io.IOException;
 
 public class  WriterToFile {
     private static FileWriter file;
-    private static final String address = "D:\\Projects\\TestGenerator\\src\\main\\resources\\groups.json";
+    private final String address;
 
-    public static void writeToFile(JSONObject obj) {
+    public WriterToFile(String address) {
+        this.address = address;
+    }
+
+    public void writeToFile(JSONObject obj) {
         try {
 
             file = new FileWriter(address);
