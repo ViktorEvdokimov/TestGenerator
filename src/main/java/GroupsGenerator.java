@@ -1,6 +1,29 @@
+import java.sql.*;
+import java.util.ArrayList;
+
 public class GroupsGenerator {
-    private String[] names = new String[]{"IT", "DevOps", "Testers", "Managers", "Students", "OfficeManagers",
-    "Engineers", "Unemployed", "IE", "Developers"};
+    private ArrayList<String> names = new ArrayList<>();
+
+    private Connection conn = null;
+    private Statement stmt = null;
+    private ResultSet rs = null;
+    private static final String url = "jdbc:mysql://localhost:3306/groups_and_persons?useUnicode=true&serverTimezone=UTC";
+    private static final String user = "root";
+    private static final String pass = "root";
+
+    public GroupsGenerator() {
+        try {
+            conn = DriverManager.getConnection(url, user, pass);
+            stmt = conn.createStatement();
+
+            rs = stmt.executeQuery("SELECT * FROM groups_and_persons.groups;");
+            while (rs.next()) {
+                names.add(names.size(), rs.getString(2));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 
     public Group[] generateGroups(int quantityOfGroups, int quantityOfPersons){
         Group[] groups = new Group[quantityOfGroups];
@@ -15,7 +38,7 @@ public class GroupsGenerator {
     public Group getRandomGroup (int personsQuantity, int nameNumber) {
         PersonsGenerator pg = new PersonsGenerator();
         Person[] persons = pg.getPersonArray(personsQuantity);
-        String name = names[nameNumber];
+        String name = names.get(nameNumber);
         return new Group(name, persons);
     }
 
@@ -25,7 +48,7 @@ public class GroupsGenerator {
             int nameNumber;
             boolean isNameNumberBusy;
             do {
-                nameNumber = (int) (Math.random() * names.length + 1);
+                nameNumber = (int) (Math.random() * names.size() + 1);
                 isNameNumberBusy = false;
                 for (int number : nameNumbers) {
                     if ((number) == nameNumber) {
