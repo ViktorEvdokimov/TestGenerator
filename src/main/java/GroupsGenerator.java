@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GroupsGenerator {
     private ArrayList<String> names = new ArrayList<>();
@@ -54,25 +55,16 @@ public class GroupsGenerator {
     }
 
     private int[] getNameNumbersArray(int groupCount){
-        int[] nameNumbers = new int[groupCount];
-        for (int i = 0; i < (groupCount); i++) {
-            int nameNumber;
-            boolean isNameNumberBusy;
-            do {
-                nameNumber = (int) (Math.random() * names.size() + 1);
-                isNameNumberBusy = false;
-                for (int number : nameNumbers) {
-                    if ((number) == nameNumber) {
-                        isNameNumberBusy = true;
-                    }
-                }
-            }while (isNameNumberBusy);
-            nameNumbers[i] = nameNumber;
+        int[] namesNumbers = new int[groupCount];
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i=0; i< names.size(); i++) {
+            list.add(new Integer(i));
         }
-        for (int i = 0; i < groupCount; i++) {
-            nameNumbers[i]--;
+        Collections.shuffle(list);
+        for (int i=0; i<groupCount; i++) {
+            namesNumbers[i] = list.get(i);
         }
-        return nameNumbers;
+        return namesNumbers;
     }
 
     private int[] getQuantityArray (int groupCount, int personCount){
