@@ -1,22 +1,22 @@
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 
 public class Main {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
 
-        JSONObject obj = new JSONObject();
-
-        JSONArray groups = new JSONArray();
         GroupsGenerator gg = new GroupsGenerator();
         Group[] groupsArray = gg.generateGroups(10, 50);
-        for (Group group: groupsArray) {
-            groups.add(group);
+        ObjectMapper obj = new ObjectMapper();
+        try {
+            String result = obj.writeValueAsString(groupsArray);
+            WriterToFile writer = new WriterToFile("D:\\Projects\\TestGenerator\\src\\main\\resources\\groups.json");
+            writer.writeToFile(result);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
         }
-        obj.put("Groups List: ", groups);
-        WriterToFile writer = new WriterToFile("D:\\Projects\\TestGenerator\\src\\main\\resources\\groups.json");
-        writer.writeToFile(obj);
 
     }
 

@@ -14,11 +14,10 @@ public class  WriterToFile {
         this.address = address;
     }
 
-    public void writeToFile(JSONObject obj) {
+    public void writeToFile(String object) {
         try {
-
             file = new FileWriter(address);
-            file.write(obj.toJSONString());
+            file.write(object);
 
         } catch (IOException e) {
             e.printStackTrace();
