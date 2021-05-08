@@ -9,9 +9,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class PersonsGenerator {
-    private ArrayList<String> lastNames = new ArrayList<>();
-    private ArrayList<String> firstNames = new ArrayList<>();
-    private ArrayList<String> patronymics = new ArrayList<>();
+    private ArrayList<String> manLastNames = new ArrayList<>();
+    private ArrayList<String> manFirstNames = new ArrayList<>();
+    private ArrayList<String> manPatronymics = new ArrayList<>();
+    private ArrayList<String> womanLastNames = new ArrayList<>();
+    private ArrayList<String> womanFirstNames = new ArrayList<>();
+    private ArrayList<String> womanPatronymics = new ArrayList<>();
     private ArrayList<String> streets = new ArrayList<>();
 
     private Connection conn = null;
@@ -26,19 +29,34 @@ public class PersonsGenerator {
             conn = DriverManager.getConnection(url, user, pass);
             stmt = conn.createStatement();
 
+            rs = stmt.executeQuery("SELECT woman_first_name FROM woman_first_name");
+            while (rs.next()){
+                womanFirstNames.add(womanFirstNames.size(), rs.getString(1));
+            }
+
+            rs = stmt.executeQuery("SELECT woman_last_name FROM woman_last_name");
+            while (rs.next()){
+                womanLastNames.add(womanLastNames.size(), rs.getString(1));
+            }
+
+            rs = stmt.executeQuery("SELECT woman_patronymic FROM woman_patronymic");
+            while (rs.next()){
+                womanPatronymics.add(womanPatronymics.size(), rs.getString(1));
+            }
+
             rs = stmt.executeQuery("SELECT man_first_name FROM man_first_name");
             while (rs.next()){
-                firstNames.add(firstNames.size(), rs.getString(1));
+                manFirstNames.add(manFirstNames.size(), rs.getString(1));
             }
 
             rs = stmt.executeQuery("SELECT man_last_name FROM man_last_name");
             while (rs.next()){
-                lastNames.add(lastNames.size(), rs.getString(1));
+                manLastNames.add(manLastNames.size(), rs.getString(1));
             }
 
             rs = stmt.executeQuery("SELECT man_patronymic FROM man_patronymic");
             while (rs.next()){
-                patronymics.add(patronymics.size(), rs.getString(1));
+                manPatronymics.add(manPatronymics.size(), rs.getString(1));
             }
 
             rs = stmt.executeQuery("SELECT street FROM street");
@@ -59,9 +77,18 @@ public class PersonsGenerator {
     }
 
     public Person getRandomPerson (){
-        String lastName = lastNames.get((int) (Math.random()*lastNames.size()));
-        String firstName = firstNames.get((int) (Math.random()*firstNames.size()));
-        String patronymic = patronymics.get((int) (Math.random()*patronymics.size()));
+        String lastName;
+        String firstName;
+        String patronymic;
+        if(Math.random()>0.5) {
+             lastName = manLastNames.get((int) (Math.random() * manLastNames.size()));
+             firstName = manFirstNames.get((int) (Math.random() * manFirstNames.size()));
+             patronymic = manPatronymics.get((int) (Math.random() * manPatronymics.size()));
+        } else {
+             lastName = womanLastNames.get((int) (Math.random() * womanLastNames.size()));
+             firstName = womanFirstNames.get((int) (Math.random() * womanFirstNames.size()));
+             patronymic = womanPatronymics.get((int) (Math.random() * womanPatronymics.size()));
+        }
         String address = streets.get((int) (Math.random()*streets.size())) + ' ' +
                 (int)(Math.random() * 49 + 1) + " дом " + (int)(Math.random() * 199 + 1) + " квартира";
         long phoneNumber = 89000000000l + ((long) (Math.random()* 999999999));
