@@ -69,6 +69,9 @@ public class PersonsGenerator {
     }
 
     public Person[] getPersonArray (int quantity){
+        if (quantity < 0){
+            throw new IndexOutOfBoundsException("Quantity should be 0 or positive. Please enter suitable data.");
+        }
         Person persons[] = new Person[quantity];
         for (int i = 0; i < quantity; i++) {
             persons[i] = getRandomPerson();

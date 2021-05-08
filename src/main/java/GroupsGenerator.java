@@ -26,6 +26,16 @@ public class GroupsGenerator {
     }
 
     public Group[] generateGroups(int quantityOfGroups, int quantityOfPersons){
+        if (quantityOfGroups < 0 || quantityOfPersons < 0){
+            throw new IndexOutOfBoundsException("Quantity should be 0 or positive. Please enter suitable data.");
+        }
+        if (quantityOfGroups == 0){
+            throw new IndexOutOfBoundsException("Quantity  of groups should be positive. Please enter suitable data.");
+        }
+        if(quantityOfGroups > names.size()){
+            throw new IndexOutOfBoundsException("Quantity of groups more then size of names base. Please add new " +
+                    "groups names or enter less groups quantity.");
+        }
         Group[] groups = new Group[quantityOfGroups];
         int[] nameNumbersArray = getNameNumbersArray(quantityOfGroups);
         int[] quantityArray = getQuantityArray(quantityOfGroups, quantityOfPersons);
@@ -72,6 +82,7 @@ public class GroupsGenerator {
             if (i < (quantityOfGroups-1)) {
                 quantityOfDefinedPersons = (int) (Math.random() * (quantityOfPersons - countOfDefinedPersons)
                         * 2 / (quantityOfGroups - i));
+                if (quantityOfDefinedPersons > countOfDefinedPersons) quantityOfDefinedPersons = countOfDefinedPersons;
             } else quantityOfDefinedPersons = quantityOfPersons - countOfDefinedPersons;
             quantityArray[i] = quantityOfDefinedPersons;
         }

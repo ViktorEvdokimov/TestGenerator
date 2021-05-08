@@ -9,6 +9,13 @@ public class Group {
         this.persons = persons;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Person[] getPersons() {
+        return persons;
+    }
 
     @Override
     public String toString() {

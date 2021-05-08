@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         GroupsGenerator gg = new GroupsGenerator();
-        Group[] groupsArray = gg.generateGroups(10, 50);
+        Group[] groupsArray = gg.generateGroups(20, 500);
         ObjectMapper obj = new ObjectMapper();
         try {
             String result = obj.writeValueAsString(groupsArray);
