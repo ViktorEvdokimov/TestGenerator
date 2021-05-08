@@ -1,21 +1,23 @@
+import java.util.UUID;
+
 public class Person {
     private String fullName;
     private String address;
     private long phoneNumber;
-    private int GUID;
+    private UUID GUID;
 
-    public Person(String fullName, String address, long phoneNumber, int GUID) {
+    public Person(String fullName, String address, long phoneNumber) {
         this.fullName = fullName;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.GUID = GUID;
+        this.GUID = UUID.randomUUID();;
     }
 
     public Person(String firstName, String lastName, String patronymic, String address, long phoneNumber, int GUID) {
         this.fullName = lastName + ' ' + firstName + ' ' + patronymic;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.GUID = GUID;
+        this.GUID = UUID.randomUUID();;
     }
 
     public String getFullName() {
@@ -30,7 +32,7 @@ public class Person {
         return phoneNumber;
     }
 
-    public int getGUID() {
+    public UUID getGUID() {
         return GUID;
     }
 
