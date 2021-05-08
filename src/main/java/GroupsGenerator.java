@@ -25,22 +25,23 @@ public class GroupsGenerator {
         }
     }
 
-    public Group[] generateGroups(int quantityOfGroups, int quantityOfPersons){
-        if (quantityOfGroups < 0 || quantityOfPersons < 0){
+    public Group[] generateGroups(int groupCount, int personCount){
+        if (groupCount < 0 || personCount < 0){
             throw new IndexOutOfBoundsException("Quantity should be 0 or positive. Please enter suitable data.");
         }
-        if (quantityOfGroups == 0){
+        if (groupCount == 0){
             throw new IndexOutOfBoundsException("Quantity  of groups should be positive. Please enter suitable data.");
         }
-        if(quantityOfGroups > names.size()){
+        if(groupCount > names.size()){
             throw new IndexOutOfBoundsException("Quantity of groups more then size of names base. Please add new " +
                     "groups names or enter less groups quantity.");
         }
-        Group[] groups = new Group[quantityOfGroups];
-        int[] nameNumbersArray = getNameNumbersArray(quantityOfGroups);
-        int[] quantityArray = getQuantityArray(quantityOfGroups, quantityOfPersons);
-        for (int i = 0; i < (quantityOfGroups); i++) {
+        Group[] groups = new Group[groupCount];
+        int[] nameNumbersArray = getNameNumbersArray(groupCount);
+        int[] quantityArray = getQuantityArray(groupCount, personCount);
+        for (int i = 0; i < (groupCount); i++) {
             groups[i] = getRandomGroup(quantityArray[i], nameNumbersArray[i]);
+            System.out.println(quantityArray[i]);
         }
         return groups;
     }
@@ -52,9 +53,9 @@ public class GroupsGenerator {
         return new Group(name, persons);
     }
 
-    private int[] getNameNumbersArray(int quantityOfGroups){
-        int[] nameNumbers = new int[quantityOfGroups];
-        for (int i = 0; i < (quantityOfGroups); i++) {
+    private int[] getNameNumbersArray(int groupCount){
+        int[] nameNumbers = new int[groupCount];
+        for (int i = 0; i < (groupCount); i++) {
             int nameNumber;
             boolean isNameNumberBusy;
             do {
@@ -68,23 +69,23 @@ public class GroupsGenerator {
             }while (isNameNumberBusy);
             nameNumbers[i] = nameNumber;
         }
-        for (int i = 0; i < quantityOfGroups; i++) {
+        for (int i = 0; i < groupCount; i++) {
             nameNumbers[i]--;
         }
         return nameNumbers;
     }
 
-    private int[] getQuantityArray (int quantityOfGroups, int quantityOfPersons){
-        int countOfDefinedPersons = 0;
-        int[] quantityArray = new int[quantityOfGroups];
-        for (int i = 0; i < (quantityOfGroups); i++) {
-            int quantityOfDefinedPersons;
-            if (i < (quantityOfGroups-1)) {
-                quantityOfDefinedPersons = (int) (Math.random() * (quantityOfPersons - countOfDefinedPersons)
-                        * 2 / (quantityOfGroups - i));
-                if (quantityOfDefinedPersons > countOfDefinedPersons) quantityOfDefinedPersons = countOfDefinedPersons;
-            } else quantityOfDefinedPersons = quantityOfPersons - countOfDefinedPersons;
-            quantityArray[i] = quantityOfDefinedPersons;
+    private int[] getQuantityArray (int groupCount, int personCount){
+        int definedPersons = 0;
+        int[] quantityArray = new int[groupCount];
+        for (int i = 0; i < (groupCount); i++) {
+            int thisGroup;
+            if (i < (groupCount-1)) {
+                thisGroup = (int) (Math.random() * (personCount - definedPersons) * 2/ (groupCount - i));
+                if (thisGroup > (personCount - definedPersons)) thisGroup = definedPersons;
+            } else thisGroup = personCount - definedPersons;
+            definedPersons +=thisGroup;
+            quantityArray[i] = thisGroup;
         }
         return quantityArray;
     }
