@@ -8,15 +8,18 @@ public class PersonsGenerator {
     public Person[] getPersonArray (int quantity){
         Person persons[] = new Person[quantity];
         for (int i = 0; i < quantity; i++) {
-            String lastName = lastNames[(int) (Math.random()*lastNames.length)];
-            String firstName = firstNames[(int) (Math.random()*firstNames.length)];
-            String patronymic = patronymics[(int) (Math.random()* patronymics.length)];
-            String address = streets[(int) (Math.random()* streets.length)] +
-                    (int)(Math.random() * 49 + 1) + " house " + (int)(Math.random() * 199 + 1) + " flat";
-            long phoneNumber = 89000000000l + ((long) (Math.random()* 999999999));
-            int GUID = i+1;
-            persons[i] = new Person(firstName, lastName, patronymic, address, phoneNumber, GUID);
+            persons[i] = getRandomPerson();
         }
         return persons;
+    }
+
+    public Person getRandomPerson (){
+        String lastName = lastNames[(int) (Math.random()*lastNames.length)];
+        String firstName = firstNames[(int) (Math.random()*firstNames.length)];
+        String patronymic = patronymics[(int) (Math.random()* patronymics.length)];
+        String address = streets[(int) (Math.random()* streets.length)] +
+                (int)(Math.random() * 49 + 1) + " house " + (int)(Math.random() * 199 + 1) + " flat";
+        long phoneNumber = 89000000000l + ((long) (Math.random()* 999999999));
+        return new Person(firstName, lastName, patronymic, address, phoneNumber);
     }
 }

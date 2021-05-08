@@ -13,7 +13,7 @@ public class Person {
         this.GUID = UUID.randomUUID();;
     }
 
-    public Person(String firstName, String lastName, String patronymic, String address, long phoneNumber, int GUID) {
+    public Person(String firstName, String lastName, String patronymic, String address, long phoneNumber) {
         this.fullName = lastName + ' ' + firstName + ' ' + patronymic;
         this.address = address;
         this.phoneNumber = phoneNumber;
