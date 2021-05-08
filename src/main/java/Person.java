@@ -36,11 +36,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "fullName='" + fullName + '\'' +
-                ", address='" + address + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                ", GUID=" + GUID +
-                '}';
+        return "\n{\n" +
+                "fullName = '" + fullName + "\',\n" +
+                "address = '" + address + "\',\n" +
+                "phoneNumber = " + phoneNumber + ",\n" +
+                "GUID = " + GUID + "\n" +
+                '}' ;
     }
 }

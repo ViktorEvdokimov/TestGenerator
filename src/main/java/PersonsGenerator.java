@@ -12,7 +12,7 @@ public class PersonsGenerator {
             String firstName = firstNames[(int) (Math.random()*firstNames.length)];
             String patronymic = patronymics[(int) (Math.random()* patronymics.length)];
             String address = streets[(int) (Math.random()* streets.length)] +
-                    (int)(Math.random()* 50) + " house " + (int)(Math.random()* 200) + " flat";
+                    (int)(Math.random() * 49 + 1) + " house " + (int)(Math.random() * 199 + 1) + " flat";
             long phoneNumber = 89000000000l + ((long) (Math.random()* 999999999));
             int GUID = i+1;
             persons[i] = new Person(firstName, lastName, patronymic, address, phoneNumber, GUID);
