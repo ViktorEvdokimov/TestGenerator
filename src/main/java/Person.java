@@ -18,21 +18,6 @@ public class Person {
         this(lastName + ' ' + firstName + ' ' + patronymic, address, phoneNumber);
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public UUID getGUID() {
-        return GUID;
-    }
 
     @Override
     public String toString() {
