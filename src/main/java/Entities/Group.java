@@ -1,3 +1,5 @@
+package Entities;
+
 import java.util.Arrays;
 
 public class Group {

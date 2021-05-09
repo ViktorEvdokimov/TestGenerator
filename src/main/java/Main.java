@@ -1,3 +1,5 @@
+import Entities.Group;
+import Entities.GroupsFromDB;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -7,16 +9,11 @@ public class Main {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
 
-        GroupsGenerator gg = new GroupsGenerator();
-        Group[] groupsArray = gg.generateGroups(20, 500);
-        ObjectMapper obj = new ObjectMapper();
-        try {
-            String result = obj.writeValueAsString(groupsArray);
-            WriterToFile writer = new WriterToFile("src/main/resources/groups.json");
-            writer.writeToFile(result);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
+//        JsonGenerator.getJsonFile(
+//                "jdbc:mysql://localhost:3306/groups_and_persons?useUnicode=true&serverTimezone=UTC",
+//                "root", "root", 25, 500);
+
+        JsonGenerator.getJsonFile("src/main/resources/Data/", 25, 500);
 
     }
 
