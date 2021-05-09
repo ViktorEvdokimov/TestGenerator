@@ -1,11 +1,31 @@
 package Entities;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class GroupsGenerator {
+public class GroupsGenerator {
 
     protected ArrayList<String> names = new ArrayList<>();
+    private final String address;
+
+    public GroupsGenerator(String address) {
+        this.address = address;
+        File file = new File(address + "Groups.txt");
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF8"));
+            String sCurrentLine;
+
+            while ((sCurrentLine = br.readLine()) != null) {
+                if (sCurrentLine.length()>1) {
+                    names.add(sCurrentLine);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public Group[] generateGroups(int groupCount, int personCount){
         if (groupCount < 0 || personCount < 0){
@@ -33,7 +53,11 @@ public abstract class GroupsGenerator {
         return new Group(name, persons);
     }
 
-    public abstract Person[] getPerson(int personsQuantity);
+    public Person[] getPerson(int personsQuantity) {
+        PersonsGenerator pg = new PersonsGenerator(address);
+        Person[] persons = pg.getPersonArray(personsQuantity);
+        return persons;
+    }
 
     protected int[] getNameNumbersArray(int groupCount){
         int[] namesNumbers = new int[groupCount];
