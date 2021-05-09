@@ -15,23 +15,22 @@
   <component name="ChangeListManager">
     <list default="true" id="49243b45-c9a1-4a3b-be94-5fb960a2657d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GroupsFromDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GroupsFromTxt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GroupsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/GroupsGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/PersonsFromDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/PersonsFromTxt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/PersonsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/PersonsGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JsonGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/GroupsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/GroupsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/PersonsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/PersonsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WriterToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/WriterToFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Dumb 08.05.2021.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/groups.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/groups.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/GroupsFromDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/GroupsFromTxt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/GroupsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/GroupsGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/PersonsFromDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/PersonsFromTxt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/PersonsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/PersonsGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JsonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Dumb 08.05.2021.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/GroupsGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/PersonsGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WriterToFile.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/groups.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/groups.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,22 +64,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\TestGenerator\src\main\java\Entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main1">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="First" />
-      <module name="TestGenerator" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TestGenerator" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,6 +92,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ru.evdokimov.testdatagetnerator.Main" />
+      <module name="TestGenerator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.evdokimov.testdatagetnerator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.evdokimov.testdatagetnerator.Entities.Main" />
+      <module name="TestGenerator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="TestGenerator" />
@@ -106,10 +119,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.First" />
+      <item itemvalue="Application.Main1" />
+      <item itemvalue="Application.Test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main1" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.First" />
         <item itemvalue="Application.Test" />
       </list>
@@ -139,10 +158,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="174" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620539631285">
+    <state x="174" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620575346354">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
-    <state x="174" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620539631285" />
+    <state x="174" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620575346354" />
     <state x="465" y="236" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620494954867">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
@@ -153,6 +172,10 @@
     <state x="765" y="240" key="#com.intellij.ide.util.MemberChooser/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620474548110" />
     <state x="544" y="138" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1620444660863" />
     <state x="574" y="199" key="#com.intellij.ide.util.MemberChooser/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620539753188" />
+    <state x="445" y="358" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1620546785838">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="445" y="358" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546785838" />
     <state x="503" y="303" width="433" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1620540348499">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
@@ -161,30 +184,30 @@
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state x="450" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620545998337" />
-    <state width="1396" height="219" key="GridCell.Tab.0.bottom" timestamp="1620546316564">
+    <state width="1396" height="180" key="GridCell.Tab.0.bottom" timestamp="1620580488473">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.bottom/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028836" />
     <state width="1322" height="221" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1620448142804" />
-    <state width="1396" height="219" key="GridCell.Tab.0.bottom/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546316564" />
-    <state width="1396" height="219" key="GridCell.Tab.0.center" timestamp="1620546316564">
+    <state width="1396" height="180" key="GridCell.Tab.0.bottom/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620580488473" />
+    <state width="1396" height="180" key="GridCell.Tab.0.center" timestamp="1620580488472">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.center/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028835" />
     <state width="1322" height="221" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1620448142803" />
-    <state width="1396" height="219" key="GridCell.Tab.0.center/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546316564" />
-    <state width="1396" height="219" key="GridCell.Tab.0.left" timestamp="1620546316564">
+    <state width="1396" height="180" key="GridCell.Tab.0.center/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620580488472" />
+    <state width="1396" height="180" key="GridCell.Tab.0.left" timestamp="1620580488472">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.left/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028835" />
     <state width="1322" height="221" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1620448142803" />
-    <state width="1396" height="219" key="GridCell.Tab.0.left/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546316564" />
-    <state width="1396" height="219" key="GridCell.Tab.0.right" timestamp="1620546316564">
+    <state width="1396" height="180" key="GridCell.Tab.0.left/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620580488472" />
+    <state width="1396" height="180" key="GridCell.Tab.0.right" timestamp="1620580488473">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.right/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028836" />
     <state width="1322" height="221" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1620448142804" />
-    <state width="1396" height="219" key="GridCell.Tab.0.right/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546316564" />
+    <state width="1396" height="180" key="GridCell.Tab.0.right/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620580488473" />
     <state width="1396" height="173" key="GridCell.Tab.1.bottom" timestamp="1620497728302">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
@@ -209,6 +232,14 @@
     <state width="1876" height="221" key="GridCell.Tab.1.right/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620459584630" />
     <state width="1322" height="221" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1620448143317" />
     <state width="1396" height="173" key="GridCell.Tab.1.right/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620497728302" />
+    <state x="250" y="89" key="Maven.ArtifactSearchDialog" timestamp="1620577905307">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="250" y="89" key="Maven.ArtifactSearchDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620577905307" />
+    <state x="221" y="66" key="SettingsEditor" timestamp="1620579499179">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="221" y="66" key="SettingsEditor/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620579499179" />
     <state x="1659" y="0" width="1130" height="845" key="dock-window-1" timestamp="1620537973336">
       <screen x="1440" y="0" width="1366" height="768" />
     </state>
@@ -226,6 +257,14 @@
       <screen x="1440" y="0" width="1366" height="768" />
     </state>
     <state x="1440" y="0" width="1130" height="598" key="dock-window-4/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620546334270" />
+    <state x="1481" y="35" width="1130" height="637" key="dock-window-5" timestamp="1620577041419">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1481" y="35" width="1130" height="637" key="dock-window-5/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620577041419" />
+    <state x="1696" y="0" width="866" height="637" key="dock-window-6" timestamp="1620578475160">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1696" y="0" width="866" height="637" key="dock-window-6/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620578475160" />
     <state x="616" y="237" key="run.anything.popup" timestamp="1620464317345">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
