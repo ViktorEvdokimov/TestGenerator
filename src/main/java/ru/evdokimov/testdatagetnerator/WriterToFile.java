@@ -21,14 +21,6 @@ public class  WriterToFile {
             File f = new File(address);
             FileUtils.writeStringToFile(f, object, "UTF-8");
 
-//            file = new File(address);
-//            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "UTF8"));
-//            char[] obj = object.toCharArray();
-//            for (char symbol: obj) {
-////                writer.write(symbol);
-//                printWriter.print(symbol);
-//            }
-
         } catch (IOException e) {
             e.printStackTrace();
         }

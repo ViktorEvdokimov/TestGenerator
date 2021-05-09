@@ -5,10 +5,19 @@ import ru.evdokimov.testdatagetnerator.Entities.GroupsGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
-        createJsonFile("src/main/resources/Data/", 25, 1000);
+        int groupCount = 25;
+        int personCount = 500;
+        if(args.length==2){
+            System.out.println(Arrays.toString(args));
+            groupCount = Integer.parseInt(args[0]);
+            personCount = Integer.parseInt(args[1]);
+        }
+        createJsonFile("classes/Data/", groupCount, personCount);
     }
 
     public static void createJsonFile (String address, int groupCount, int personCount){
