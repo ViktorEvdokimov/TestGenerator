@@ -14,7 +14,7 @@ public class Main {
         int personCount = 500;
         try {
             if (args.length == 2) {
-                System.out.println(Arrays.toString(args));
+                System.out.println("Groups count: " + args[0] + "\nPersons count: " + args[1]);
                 groupCount = Integer.parseInt(args[0]);
                 personCount = Integer.parseInt(args[1]);
             }

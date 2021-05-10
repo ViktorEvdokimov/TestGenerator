@@ -3,6 +3,7 @@ package ru.evdokimov.testdatagetnerator.Entities;
 import java.io.*;
 import java.util.ArrayList;
 
+
 public class PersonsGenerator {
     protected ArrayList<String> manLastNames = new ArrayList<String>();
     protected ArrayList<String> manFirstNames = new ArrayList<String>();
@@ -13,6 +14,8 @@ public class PersonsGenerator {
     protected ArrayList<String> streets = new ArrayList<String>();
     private final String address;
 
+    /** Во время создания обьекта считываются мужские и женские ФИО (из отдельных файлов), и названия улиц из файла
+     * и записываются в коллекцию **/
     public PersonsGenerator(String address) {
         this.address = address;
         putToList("ManFirstName.txt", manFirstNames);
@@ -24,6 +27,7 @@ public class PersonsGenerator {
         putToList("streets.txt", streets);
     }
 
+    /** Создание массива из "quantity" персон **/
     public Person[] getPersonArray (int quantity){
         if (quantity < 0){
             throw new IndexOutOfBoundsException("Quantity should be 0 or positive. Please enter suitable data.");
@@ -35,6 +39,9 @@ public class PersonsGenerator {
         return persons;
     }
 
+    /** Создание случайной персоны. Сначала случайно выбирается пол, затем, в зависимости от пола, случайным образом
+     * назначаются фамилия, имя, отчество, название улицы из коллекций. Номер дома случайное число от 1 до 50, квартира
+     * от 1 до 200. GUID назначается в конструкторе класса "Person" **/
     public Person getRandomPerson (){
         String lastName;
         String firstName;
@@ -54,6 +61,7 @@ public class PersonsGenerator {
         return new Person(firstName, lastName, patronymic, address, phoneNumber);
     }
 
+    /** Данные из файла "fileName" записываются в коллекцию "target" **/
     private void putToList (String fileName, ArrayList target){
         File file = new File(address + fileName);
         try {

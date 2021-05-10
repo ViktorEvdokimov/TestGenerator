@@ -10,6 +10,8 @@ public class GroupsGenerator {
     private final String address;
     private PersonsGenerator pg;
 
+
+    /** Во время создания обьекта считываются имена из файла и записываются в коллекцию **/
     public GroupsGenerator(String address) {
         this.address = address;
         pg = new PersonsGenerator(address);
@@ -28,16 +30,16 @@ public class GroupsGenerator {
         }
     }
 
-
+    /** Генерация случайного "groupCount" групп общим количеством "personCount"**/
     public Group[] generateGroups(int groupCount, int personCount){
         if (groupCount < 0 || personCount < 0){
-            throw new IndexOutOfBoundsException("Quantity should be 0 or positive. Please enter suitable data.");
+            throw new NumberFormatException("Quantity should be 0 or positive. Please enter suitable data.");
         }
         if (groupCount == 0){
-            throw new IndexOutOfBoundsException("Quantity  of groups should be positive. Please enter suitable data.");
+            throw new NumberFormatException("Quantity  of groups should be positive. Please enter suitable data.");
         }
         if(groupCount > names.size()){
-            throw new IndexOutOfBoundsException("Quantity of groups more then size of names base. Please add new " +
+            throw new NumberFormatException("Quantity of groups more then size of names base. Please add new " +
                     "groups names or enter less groups quantity.");
         }
         Group[] groups = new Group[groupCount];
@@ -49,13 +51,16 @@ public class GroupsGenerator {
         return groups;
     }
 
+    /** Генерация случайной группы, "nameNumber" указывает на номер ячейки в массиве имен,
+     * "personsQuantity" количество человек в группе **/
     public Group getRandomGroup (int personsQuantity, int nameNumber) {
         Person[] persons = pg.getPersonArray(personsQuantity);
         String name = names.get(nameNumber);
         return new Group(name, persons);
     }
 
-
+    /** Генерация массива случайных неповторяющихся чисел (макс число количество имен в массиве, количество чисел
+     * "groupCount") для исключения наличия двух групп с одинаковыми именами. **/
     protected int[] getNameNumbersArray(int groupCount){
         int[] namesNumbers = new int[groupCount];
         ArrayList<Integer> list = new ArrayList<Integer>();
@@ -69,6 +74,7 @@ public class GroupsGenerator {
         return namesNumbers;
     }
 
+    /** Распределение "personCount" на "groupCount" случайными, но приблизительно равномерными  группами **/
     protected int[] getQuantityArray (int groupCount, int personCount){
         int definedPersons = 0;
         int[] quantityArray = new int[groupCount];
