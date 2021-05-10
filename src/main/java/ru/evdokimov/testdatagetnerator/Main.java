@@ -12,12 +12,17 @@ public class Main {
     public static void main(String[] args) {
         int groupCount = 25;
         int personCount = 500;
-        if(args.length==2){
-            System.out.println(Arrays.toString(args));
-            groupCount = Integer.parseInt(args[0]);
-            personCount = Integer.parseInt(args[1]);
+        try {
+            if (args.length == 2) {
+                System.out.println(Arrays.toString(args));
+                groupCount = Integer.parseInt(args[0]);
+                personCount = Integer.parseInt(args[1]);
+            }
+        } catch (NumberFormatException e){
+            System.out.println("Invalid arguments, please enter 2 positive integer numbers.");
+            throw new RuntimeException(e);
         }
-        createJsonFile("classes/Data/", groupCount, personCount);
+        createJsonFile("src/main/resources/Data/", groupCount, personCount);
     }
 
     public static void createJsonFile (String address, int groupCount, int personCount){

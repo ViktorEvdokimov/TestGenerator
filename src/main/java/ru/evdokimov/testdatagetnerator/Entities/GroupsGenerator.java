@@ -45,7 +45,6 @@ public class GroupsGenerator {
         int[] quantityArray = getQuantityArray(groupCount, personCount);
         for (int i = 0; i < (groupCount); i++) {
             groups[i] = getRandomGroup(quantityArray[i], nameNumbersArray[i]);
-            System.out.println(quantityArray[i]);
         }
         return groups;
     }
