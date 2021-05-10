@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>projectMy</artifactId>
+    <artifactId>TestGenerator</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
-    <name>projectMy</name>
+    <version>1</version>
+    <name>TestGenerator</name>
     <url>http://maven.apache.org</url>
 
 
@@ -46,6 +46,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.21</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.72</version>
+        </dependency>
+
     </dependencies>
 
     <build>

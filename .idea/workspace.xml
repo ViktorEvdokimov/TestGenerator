@@ -16,15 +16,12 @@
     <list default="true" id="49243b45-c9a1-4a3b-be94-5fb960a2657d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groups.json" beforeDir="false" afterPath="$PROJECT_DIR$/groups.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectMy-1.0-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/projectMy-1.0-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/GroupsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/GroupsGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/PersonsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Entities/PersonsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectMy-1.0-jar-with-dependencies.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/evdokimov/testdatagetnerator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Entities/GroupsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Entities/GroupsGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Entities/PersonsGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Entities/PersonsGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/evdokimov/testdatagetnerator/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/groups.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/projectMy-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/projectMy-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/projectMy-1.0.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,30 +174,30 @@
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state x="450" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620545998337" />
-    <state width="1396" height="180" key="GridCell.Tab.0.bottom" timestamp="1620622644054">
+    <state width="1396" height="180" key="GridCell.Tab.0.bottom" timestamp="1620651853281">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.bottom/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028836" />
     <state width="1322" height="221" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1620448142804" />
-    <state width="1396" height="180" key="GridCell.Tab.0.bottom/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620622644054" />
-    <state width="1396" height="180" key="GridCell.Tab.0.center" timestamp="1620622644054">
+    <state width="1396" height="180" key="GridCell.Tab.0.bottom/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620651853281" />
+    <state width="1396" height="180" key="GridCell.Tab.0.center" timestamp="1620651853281">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.center/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028835" />
     <state width="1322" height="221" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1620448142803" />
-    <state width="1396" height="180" key="GridCell.Tab.0.center/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620622644054" />
-    <state width="1396" height="180" key="GridCell.Tab.0.left" timestamp="1620622644054">
+    <state width="1396" height="180" key="GridCell.Tab.0.center/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620651853281" />
+    <state width="1396" height="180" key="GridCell.Tab.0.left" timestamp="1620651853280">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.left/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028835" />
     <state width="1322" height="221" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1620448142803" />
-    <state width="1396" height="180" key="GridCell.Tab.0.left/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620622644054" />
-    <state width="1396" height="180" key="GridCell.Tab.0.right" timestamp="1620622644054">
+    <state width="1396" height="180" key="GridCell.Tab.0.left/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620651853280" />
+    <state width="1396" height="180" key="GridCell.Tab.0.right" timestamp="1620651853281">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
     <state width="1876" height="279" key="GridCell.Tab.0.right/-1366.0.1366.738/0.0.1920.1050@0.0.1920.1050" timestamp="1620475028836" />
     <state width="1322" height="221" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1620448142804" />
-    <state width="1396" height="180" key="GridCell.Tab.0.right/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620622644054" />
+    <state width="1396" height="180" key="GridCell.Tab.0.right/0.0.1440.870/1440.0.1366.768@0.0.1440.870" timestamp="1620651853281" />
     <state width="1396" height="173" key="GridCell.Tab.1.bottom" timestamp="1620497728302">
       <screen x="0" y="0" width="1440" height="870" />
     </state>
